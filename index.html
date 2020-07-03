@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Atividade 06-06</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script> 
+        alert('Olá Mundo');
+        </script>
+        <script type="text/javascript">
+                function calcular() {
+                var valor1 = document.calcform.valor1.value;
+                var valor2 = document.calcform.valor2.value;
+                var res = parseInt(valor1) + parseInt(valor2);
+                
+                document.calcform.res.value = res;
+                }
+
+                function mudarName(){
+                    var texto = "Mudei";
+                    
+                    document.texto.mudar.value = texto;
+                }
+                function mudaDiv() {
+                    document.getElementById("divtop").className = "divchange";
+                }
+        </script>
+    </head>
+    <body>
+        <h3>Atv 01</h3>
+		<p>Alert inicial</p>
+        <br>
+        <h3>Atv 02</h3>
+        <form name="calcform">
+            <fieldset>
+               <legend>Adição</legend>
+         
+               <label for="valor1">Digite um valor <strong>1</strong>:</label><br>
+               <input type="text" name="valor1" id="valor1" />
+         
+               <label for="valor2">Digite um valor <strong>2</strong>:</label><br>
+               <input type="text" name="valor2" id="valor2" />
+         
+               <label for="res">Resultado:</label><br>
+               <input type="text" name="res" id="res" />
+         
+               <input type="button" value="Calcular" onClick="calcular()"/>
+            </fieldset>
+        </form>
+
+        <h3>Atv 03</h3>
+        <button onclick="getElementById('demo').innerHTML=Date()">Horário Atual</button>
+    
+         <p id="demo">Hora:</p>
+        
+         <h3> Atv 04</h3>
+
+         <form name="texto">
+             <fieldset>
+            <input type="text" name="mudar" value="sem valor por enquanto" />
+            <input type="button" value="Mudar Valor" onClick="mudarName()"/>
+        </fieldset>
+        </form>
+
+         <h3> Atv 05</h3>
+
+         <div id="divtop">
+            Div Top
+        </div>
+
+        <button onclick="mudaDiv()">Clique Aqui para mudar a div</button>
+		
+		<h2> Atividade concluída com sucesso!</h2>
+         
+    </body>
+</html>
